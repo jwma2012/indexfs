@@ -7,7 +7,8 @@
 
 namespace leveldb {
 class Env;
-extern Env* GetOrNewHdfsEnv();
+//Env HDFS_Env();
+Env* GetOrNewHdfsEnv();
 }
 
 #endif /* STORAGE_LEVELDB_INCLUDE_ENV_HDFS_H_ */

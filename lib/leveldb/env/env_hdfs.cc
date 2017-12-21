@@ -477,7 +477,7 @@ class HDFSEnv : public Env {
 static port::Mutex mtx;
 static Env* hdfs_env = NULL;
 
-Env* Env::HDFS_Env() {
+Env* HDFS_Env() {
   if (hdfs_env == NULL) {
     MutexLock lock(&mtx);
     if (hdfs_env == NULL) {
@@ -485,6 +485,10 @@ Env* Env::HDFS_Env() {
     }
   }
   return hdfs_env;
+}
+
+Env* GetOrNewHdfsEnv() {
+  return HDFS_Env();
 }
 
 }  // namespace leveldb

@@ -10,6 +10,8 @@
 #include "common/scanner.h"
 #include "common/network.h"
 
+using namespace leveldb;
+
 namespace indexfs {
 
 namespace {
